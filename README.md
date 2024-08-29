@@ -4,3 +4,4 @@ Assignments/
 Code_Examples/
 Data/
 Exercises/
+Readings/
