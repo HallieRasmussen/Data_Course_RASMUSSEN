@@ -1,4 +1,4 @@
-# Data_Course_RASMUSSENsomething
+# Data_Course_RASMUSSEN
 else
 Assignments/
 Code_Examples/
