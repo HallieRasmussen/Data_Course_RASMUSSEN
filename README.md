@@ -3,3 +3,4 @@ else
 Assignments/
 Code_Examples/
 Data/
+Exercises/
