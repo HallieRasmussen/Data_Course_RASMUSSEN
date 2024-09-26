@@ -1,0 +1,57 @@
+#Assignment3
+
+# 1.  Get a subset of the "iris" data frame where it's just even-numbered rows
+
+seq(2,150,2) # here's the code to get a list of the even numbers between 2 and 150
+
+View(iris)
+even_rows = iris[seq(2, nrow(iris), by = 2),]
+head(even_rows)
+
+
+# 2.  Create a new object called iris_chr which is a copy of iris, except where every column is a character class
+
+## I tried it 2 different ways that were pretty similar (I hope that's ok)
+##I named them iris_chr but with a 1 or 2 after to keep the methods separate
+
+data(iris)
+iris_chr_2 = as.data.frame(lapply(iris, as.character))
+str(iris_chr_2)
+head(iris_chr_2)
+
+df_iris = data.frame(iris)
+iris_chr_1 = data.frame(lapply(iris, as.character), stringsAsFactors = FALSE)
+str(iris_chr_1)
+head(iris_chr_1)
+
+
+# 3.  Create a new numeric vector object named "Sepal.Area" which is the product of Sepal.Length and Sepal.Width
+
+data(iris)
+Sepal.Area = iris$Sepal.Length * iris$Sepal.Width
+
+
+# 4.  Add Sepal.Area to the iris data frame as a new column
+
+## Again I tried 2 different ways
+
+iris$Sepal.Area = Sepal.Area
+head(Sepal.Area)
+str(iris)
+view(iris)
+
+library(dplyr)
+Sepal.Area_column = iris %>%
+  mutate(Sepal.Area = Sepal.Area)
+view(Sepal.Area_column)
+
+
+# 5.  Create a new data frame that is a subset of iris using only rows where Sepal.Area is greater than 20 
+      # (name it big_area_iris)
+
+library(dplyr)
+big_area_iris = iris %>%
+  mutate(Sepal.Area = Sepal.Area) %>%
+  filter(Sepal.Area > 20)
+str(big_area_iris)
+view(big_area_iris)
