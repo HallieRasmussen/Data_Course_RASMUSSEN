@@ -1,4 +1,3 @@
-library(readxl)
 library(tidyverse)
 library(ggplot2)
 library(skimr)
@@ -10,7 +9,7 @@ library(caret)
 
 
 #1
-mushroom.dat = read_csv("/Users/halli/Downloads/Data_Course_RASMUSSEN/Data/mushroom_growth.csv")
+mushroom.dat = read_csv("mushroom_growth.csv")
 view(mushroom.dat)
 skim(mushroom.dat)
 head(mushroom.dat)
