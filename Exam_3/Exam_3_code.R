@@ -8,8 +8,8 @@ library(broom)
 
 
 #1
-data = read.csv("/Users/halli/Downloads/Data_Course_RASMUSSEN/Exam_3/FacultySalaries_1995.csv")
-view(data)
+data = read.csv("FacultySalaries_1995.csv")
+View(data)
 skim(data)
 clean_names(data)
 
@@ -48,7 +48,7 @@ summary(anova)
 
 
 #3
-data2 = read.csv("/Users/halli/Downloads/Data_Course_RASMUSSEN/Exam_3/Juniper_Oils.csv")
+data2 = read.csv("Juniper_Oils.csv")
 view(data2)
 skim(data2)
 clean_names(data2)
