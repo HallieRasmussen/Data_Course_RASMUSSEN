@@ -8,7 +8,7 @@ library(easystats)
 
 
 #1
-unicef.dat = read.csv("C:/Users/halli/Downloads/Data_Course_RASMUSSEN/Exam_2/unicef-u5mr.csv")
+unicef.dat = read.csv("unicef-u5mr.csv")
 view(unicef.dat)
 skim(unicef.dat)
 names(unicef.dat)
@@ -33,6 +33,8 @@ RASMUSSEN_Plot_1.png = clean.dat %>%
              y = U5MR)) +
   geom_line() +
   facet_wrap('Continent')
+RASMUSSEN_Plot_1.png
+ggsave('plot_1.png', plot = RASMUSSEN_Plot_1.png)
 
 
 
@@ -40,7 +42,6 @@ RASMUSSEN_Plot_1.png = clean.dat %>%
 mean_U5MR = clean.dat %>%
   group_by(CountryName, Continent, Year) %>%
   summarize(mean.U5MR = mean(U5MR, na.rm = TRUE))
-view(mean_U5MR)
 
 RASMUSSEN_Plot_2.png = mean_U5MR %>%
   ggplot(aes(x = Year,
@@ -49,6 +50,9 @@ RASMUSSEN_Plot_2.png = mean_U5MR %>%
   labs(y = 'Mean_U5MR') +
   geom_line() +
   theme_bw()
+RASMUSSEN_Plot_2.png
+ggsave('plot_2.png', plot = RASMUSSEN_Plot_2.png)
+
 
 
 
@@ -83,6 +87,7 @@ mod1.plot = clean.dat %>%
   geom_smooth(method = 'glm') +
   labs(y = 'Predicted U5MR') +
   theme_bw()
+mod1.plot
 
 mod2.plot = clean.dat %>%
   ggplot(aes(x = Year,
@@ -91,6 +96,7 @@ mod2.plot = clean.dat %>%
   geom_smooth(method = 'glm') +
   labs(y = 'Predicted U5MR') +
   theme_bw()
+mod2.plot
 
 mod3.plot = clean.dat %>%
   ggplot(aes(x = Year,
@@ -99,6 +105,7 @@ mod3.plot = clean.dat %>%
   geom_smooth(method = 'glm') +
   labs(y = 'Predicted U5MR') +
   theme_bw()
+mod3.plot
 
 
 clean.dat %>%
