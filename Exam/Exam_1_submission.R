@@ -1,6 +1,6 @@
 #1
 library(tidyverse)
-df = read.csv("C:/Users/halli/Downloads/Data_Course_RASMUSSEN/Exam/cleaned_covid_data.csv")
+df = read.csv("./cleaned_covid_data.csv")
 view(df)
 head(df)
 
