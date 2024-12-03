@@ -14,8 +14,8 @@ library(janitor)
 library(skimr)
 library(broom)
 
-data = read.csv("/Users/halli/Downloads/Data_Course_RASMUSSEN/Exam_3/FacultySalaries_1995.csv")
-view(data)
+data = read.csv("FacultySalaries_1995.csv")
+View(data)
 invisible(skim(data))
 invisible(clean_names(data))
 
@@ -56,8 +56,8 @@ summary(anova)
 
 ## 3.
 ```{r warning=FALSE, message=FALSE}
-data2 = read.csv("/Users/halli/Downloads/Data_Course_RASMUSSEN/Exam_3/Juniper_Oils.csv")
-view(data2)
+data2 = read.csv("Juniper_Oils.csv")
+View(data2)
 invisible(skim(data2))
 invisible(clean_names(data2))
 
