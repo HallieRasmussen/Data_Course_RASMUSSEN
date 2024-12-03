@@ -5,7 +5,7 @@ library(skimr)
 library(dplyr)
 library(easystats)
 
-religion.dat = read.csv("C:/Users/halli/Downloads/Data_Course_RASMUSSEN/Assignments/Assignment_7/Utah_Religions_by_County.csv")
+religion.dat = read.csv("./Utah_Religions_by_County.csv")
 View(religion.dat)
 head(religion.dat)
 colnames(religion.dat)
